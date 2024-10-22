@@ -1,0 +1,26 @@
+.form
+{
+  border-radius: 8px;
+  background-color: #1851578b;
+  background-color:#ADC4CE;
+}
+
+.container
+{
+  max-width:700px;
+  min-width:50%; 
+  padding:10px;
+  align-items: center;
+  margin-top:50px;
+}
+
+.btn
+{
+  background-color: #EEE0C9;
+  align-self: center;
+}
+
+.btn:hover{
+  background-color: #EEE0C9 ;
+  border:#85AFD9;
+}
