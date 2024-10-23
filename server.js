@@ -15,14 +15,14 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, './build')));
 
 // MongoDB URI
-const mongoURI = env.MONGO_URI;
+const mongoURI = process.env.MONGO_URI;
 
 
 // Twilio setup
-const accountSid = env.TWILIO_ACCOUNT_SID; // Replace with your Twilio Account SID
-const authToken = env.TWILIO_AUTH_TOKEN; // Replace with your Twilio Auth Token
+const accountSid = process.env.TWILIO_ACCOUNT_SID; // Replace with your Twilio Account SID
+const authToken = process.env.TWILIO_AUTH_TOKEN; // Replace with your Twilio Auth Token
 const client = twilio(accountSid, authToken);
-const twilioNumber = '+19124612457'; // Replace with your Twilio number
+const twilioNumber = process.env.TWILIO_NUMBER; // Replace with your Twilio number
 
 
 const formatPhoneNumber = (phoneNumber) => {
